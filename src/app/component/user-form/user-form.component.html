@@ -1,0 +1,59 @@
+
+<div class="row">
+<div class="user-form-container">
+    <h2>{{ isEdit ? 'Edit User' : 'Add User' }}</h2>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          [(ngModel)]="user.first_name"
+          name="firstName"
+          required
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          [(ngModel)]="user.last_name"
+          name="lastName"
+          required
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="user.email"
+          name="email"
+          required
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="avatar">Avatar URL</label>
+        <input
+          type="text"
+          id="avatar"
+          [(ngModel)]="user.avatar"
+          name="avatar"
+          class="form-control"
+        />
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">
+        {{ isEdit ? 'Update User' : 'Add User' }}
+      </button>
+      &nbsp; &nbsp;
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+      <br><br>
+    </form>
+  </div>
+</div>
+  

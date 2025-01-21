@@ -1,0 +1,147 @@
+/* Container to hold the cards */
+/* .user-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .user-card {
+    background-color: rgba(255, 192, 203, 0.477);
+    border-radius: 8px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .user-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .user-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .user-info p {
+    font-size: 14px;
+    color: black;
+  }
+  
+  .user-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .user-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for loading and error messages */
+  /* .loading, .error {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+  } */  
+
+  .search{
+    margin-left: 20px;
+  }
+
+
+
+  
+  .user-table-container {
+    width: 100%;
+    margin: 20px auto;
+    overflow-x: auto;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+  
+  .user-table thead {
+    background-color: #f4f4f4;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .user-table td img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    object-fit: cover;
+    align-items: center;
+  }
+  
+  .user-table td a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .user-table td a:hover {
+    text-decoration: underline;
+  }
+  
+  .user-table .btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .user-table .btn-warning {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .user-table .btn-warning:hover {
+    background-color: #e0a800;
+  }
+  
+  .user-table .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .user-table .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .user-table td,
+    .user-table th {
+      padding: 10px;
+    }
+  
+    .user-table td img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  

@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+
+<!-- 
+<div class="input-group">
+  <div class="form-outline" data-mdb-input-init>
+    <input id="search-input" type="search" id="form1" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button id="search-button" type="button" class="btn btn-primary btn-sm">
+    <i class="fas fa-search"></i>
+  </button>
+</div> -->
+
+
+<app-user-form
+  *ngIf="showForm"
+  [user]="selectedUser"
+  [isEdit]="isEditMode"
+  (formSubmit)="handleFormSubmit($event)"
+  (cancelAction)="closeForm()"
+></app-user-form>
+
+<div *ngIf="loading" class="loading">Loading users...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<!-- <div class="user-cards-container" *ngIf="!loading && !error">
+  <div class="user-card" *ngFor="let user of users">
+    <div class="user-avatar">
+      <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}" />
+    </div>
+    <div class="user-info">
+      <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+      <p>Email: <a [href]="'mailto:' + user.email">{{ user.email }}</a></p> 
+      <button class="btn btn-warning" (click)="openEditForm(user)">Edit</button>
+      &nbsp;&nbsp;
+      <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+    </div> -->
+    <!-- mailto is used for mail directly by just clicking on the link -->
+  <!-- </div>
+</div> -->
+
+<div class="user-table-container" *ngIf="!loading && !error">
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Sno.</th>
+        <th>Avatar</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>
+          {{user.id}}
+        </td>
+        <td>
+          <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}" />
+        </td>
+        <td>{{ user.first_name }} </td>
+        <td>{{ user.last_name }}</td>
+        <td>
+          <a [href]="'mailto:' + user.email">{{ user.email }}</a>
+        </td>
+        <td>
+          <button class="btn btn-warning" (click)="openEditForm(user)">Edit</button>
+          &nbsp;&nbsp;
+          <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button class="btn btn-primary" style="margin-left: 10px;" (click)="openAddForm()">Add User</button>
+</div>
